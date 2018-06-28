@@ -15,11 +15,13 @@ const movies = [
   },
   {
     id: 3,
-    title: "Rogue One"
+    title: "Rogue One",
+    desc: "A Star Wars Story"
   },
   {
     id: 4,
-    title: "Solo"
+    title: "Solo",
+    desc: "A Star Wars Story"
   }
 ];
 
@@ -30,7 +32,9 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </header>
-        {movies.map(movie => <Movie key={movie.id} movie={movie} />)}
+        {movies.map(movie => (
+          <Movie key={movie.id} movie={movie} desc={movie.desc} />
+        ))}
       </div>
     );
   }
